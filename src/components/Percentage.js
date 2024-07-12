@@ -1,6 +1,6 @@
 export default function Percentage({ children, percentage, setPercentage }) {
   return (
-    <div className="order">
+    <div className="gap">
       <p>{children}</p>
       <select
         value={percentage}
