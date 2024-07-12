@@ -1,10 +1,10 @@
-export default function FriendPercentage({children, percentage, setPercentage}) {
+export default function Percentage({ children, percentage, setPercentage }) {
   return (
-    <div className='order'>
-      {children}
+    <div className="order">
+      <p>{children}</p>
       <select
         value={percentage}
-        onChange={(e) => setPercentage(e.target.value)}
+        onChange={(e) => setPercentage(Number(e.target.value))}
       >
         <option value={0}>Dissatisfied (0%)</option>
         <option value={5}>It was okay (5%)</option>
@@ -12,6 +12,5 @@ export default function FriendPercentage({children, percentage, setPercentage}) 
         <option value={20}>Absolutely amazing! (20%)</option>
       </select>
     </div>
-  )
+  );
 }
-
