@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# React - Tip calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🔗 [Live Preview]()
 
-## Available Scripts
+![Design preview](./public/preview.gif)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## About 👋
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This React application is a practice project in whice we calculate the tip based on the base money spent and the satisfaction of the people, it is demonstrating several key concepts.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Key concepts 👨‍💻
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Lifting State Up: Managing shared state (bill amount, percentages) in the parent component `App` allows for centralized control and easier updates.
 
-### `npm run build`
+- Controlled Elements: Input fields `BillInput` and select elements `Percentage` are controlled by state in the parent component, ensuring data reflects user interaction.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Passing Children Props: The `Percentage` component accepts content `children` as a prop, allowing for customization of the service satisfaction question.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Explanation 🧠
 
-### `npm run eject`
+The project consists of three main components:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- App.js: The main component that manages the overall state (bill amount, percentages) and renders the other components.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- BillInput.js: A reusable component for the bill input field. It is a controlled component, where the parent component `App` holds the state for the bill amount and updates it based on user input.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Percentage.js: A reusable component for the service satisfaction percentage selection. It is also a controlled component, with the parent (App) managing the state for both percentages. Additionally, it allows customization of the question using the `children` prop.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Lifting State Up:
 
-## Learn More
+- The state for `bill`, `percentage1`, and `percentage2` is managed in the `App` component, making them accessible to both `BillInput` and `Percentage`. This ensures all components have access to the latest values and simplifies updates.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Controlled Elements:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Both the bill input and the percentage selection elements are controlled components. This means their values are controlled by the state in the parent `App` component, and updates are handled by event handlers `onChange` that pass the updated values back to the parent state.
 
-### Code Splitting
+### Passing Children Props:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- The `Percentage` component accepts the question text as a `children` prop, allowing you to customize the service satisfaction question for each instance. This promotes flexibility in displaying different questions.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Languages
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React: functions, useState, components, props, derived state, lifting state
+- Styling: basic
