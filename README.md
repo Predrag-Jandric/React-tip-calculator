@@ -1,6 +1,6 @@
 # React - Tip calculator
 
-# 🔗 [Live Preview]()
+# 🔗 [Live Preview](https://sparkling-sunburst-2c3069.netlify.app/)
 
 ![Design preview](./public/preview.gif)
 
